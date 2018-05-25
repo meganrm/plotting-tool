@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        body{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        #viewer-container{
+            position: relative;
+        }
         #viewer{
-            position: absolute;
             height: 400px;
-            width: 400px;
+            width: 800px;
             top: 0;
             right: 0;
+            position: relative;
         }
         #cellViewCanvas{
             position: absolute;
-            right: 300px;
         }
         .little-viewer {
             position: absolute;
@@ -25,18 +31,18 @@
     </style>
 </head>
 <body>
-    <main id="app" style="position: relative;">
+    <main id="app" style="position: relative">
             <div id="hoverinfo" style="margin-left:80px; position: absolute;">
                 <img id="hover-thumbnail" src="" />
             </div>
+            <select id="x-axis-select">
+            </select>
+            <select id="y-axis-select">
+            </select>
     </main>
-    <main id="global-view"></main>
-    <main id="zoom-viewers"  style="margin-left:80px; position: relative;"></main>
-    <main id="viewer"></main>
-    <select id="x-axis-select">
-    </select>
-    <select id="y-axis-select">
-    </select>
-    <script src="dist/bundle.js"></script>
+    <main id="viewer-container">
+        <div id="viewer">
+        </div>
+    </main>
 <script type="text/javascript" src="bundle.js"></script></body>
 </html>
